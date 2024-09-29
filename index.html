@@ -11,12 +11,12 @@
       <nav id="navbar">
         <header id="nav-header">Sorting algorithms</header>
         <ul>
-          <a href="#5_sorting_algorithms"><li class="nav-link">5 sorting algorithms</li></a>
-          <a></a><li><a class="nav-link" href="#bubble_sort">Bubble sort</a></li>
-          <li><a class="nav-link" href="#radix_sort">Radix sort</a></li></li>
-          <li><a class="nav-link" href="#introsort">Counting Sort</a></li>
-          <li><a class="nav-link" href="#merge_sort">Merge sort</a></li>
-          <li><a class="nav-link" href="#quicksort">Quicksort</a></li>
+          <a class="nav-link" href="#5_sorting_algorithms"><li class="nav-link">5 sorting algorithms</li></a>
+          <a class="nav-link" href="#bubble_sort"><li>Bubble sort</li></a>
+          <a class="nav-link" href="#radix_sort"><li>Radix sort</li></a>
+          <a class="nav-link" href="#introsort"><li>Counting Sort</li></a>
+          <a class="nav-link" href="#merge_sort"><li>Merge sort</li></a>
+          <a class="nav-link" href="#quicksort"><li>Quicksort</li></a>
         </ul>
       </nav>
     
@@ -24,7 +24,9 @@
       
 
       <section id="5_sorting_algorithms" class="main-section">
-        <header>5 sorting algorithms</header>
+        <header>
+          <h1>5 sorting algorithms</h1>
+        </header>
         <p>In this article we are gonna explore some
           sorting algorithm, going through the best 
           to the most infamous</p>
@@ -32,68 +34,106 @@
       
       <!--1er Titulo-->
       <section id="bubble_sort" class="main-section">
-        <header>Bubble sort</header>
+        <header>
+          <h1>Bubble sort</h1>
+        </header>
         <p>
-          Known for its simplicity, the Bubble algorythm 
-          yara yara...
+          Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the input list element by element, comparing the current element with the one after it, swapping their values if needed. These passes through the list are repeated until no swaps have to be performed during a pass, meaning that the list has become fully sorted. The algorithm, which is a comparison sort, is named for the way the larger elements "bubble" up to the top of the list.Known for its simplicity, the Bubble algorythm
         </p>
-        <p>
-          yara yara...
-        </p>
-        <code>code stuff here
-          procedure bubbleSort(A : list of sortable items)
-          n := length(A)
-          repeat
-              swapped := false
-              for i := 1 to n-1 inclusive do
-                  { if this pair is out of order }
-                  if A[i-1] > A[i] then
-                      { swap them and remember something changed }
-                      swap(A[i-1], A[i])
-                      swapped := true
-                  end if
-              end for
-            until not swapped
-          end procedure
-        </code>
+        <h3>Bubble sort pseudocode</h3>
+        <pre class="code">
+procedure bubbleSort(A : list of sortable items)
+n := length(A)
+repeat
+    swapped := false
+    for i := 1 to n-1 inclusive do
+        { if this pair is out of order }
+        if A[i-1] > A[i] then
+            { swap them and remember something changed }
+            swap(A[i-1], A[i])
+            swapped := true
+        end if
+    end for
+  until not swapped
+end procedure</pre>
+          <h3>Bubble sort visual representation</h3>
 
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Cq7SMsQBEUw?si=yohPL17sMbi1vrxa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <a href="https://en.wikipedia.org/wiki/Bubble_sort">More Information...</a>
+        <p>Most of the information was taken from <a href="https://en.wikipedia.org/wiki/Bubble_sort">here</a></p>
       </section>
-      <div></div>
       <!--2do Titulo-->
       <section id="quicksort" class="main-section">
-        <header>Quicksort</header>
+        <header>
+          <h1>Quicksort</h1>
+        </header>
         <p>
-          Known for its simplicity, the Bubble algorythm 
-          yara yara...
-        </p>
-        <p>
-          yara yara...
-        </p>
-        <code>code stuff here
-        </code>
+          Quicksort is an efficient, general-purpose sorting algorithm. Quicksort was developed by British computer scientist Tony Hoare in 1959 and published in 1961. It is still a commonly used algorithm for sorting. Overall, it is slightly faster than merge sort and heapsort for randomized data, particularly on larger distributions.        </p>
+        <h3>Quicksort pseudocode</h3>
+        <pre class="code">
+// Sorts a (portion of an) array, divides it into partitions, then sorts those
+algorithm quicksort(A, lo, hi) is 
+  // Ensure indices are in correct order
+  if lo >= hi || lo < 0 then 
+    return
+              
+  // Partition array and get the pivot index
+  p := partition(A, lo, hi) 
+                
+  // Sort the two partitions
+  quicksort(A, lo, p - 1) // Left side of pivot
+  quicksort(A, p + 1, hi) // Right side of pivot
+          
+// Divides array into two partitions
+algorithm partition(A, lo, hi) is 
+  pivot := A[hi] // Choose the last element as the pivot
+          
+  // Temporary pivot index
+  i := lo
+          
+  for j := lo to hi - 1 do 
+    // If the current element is less than or equal to the pivot
+    if A[j] <= pivot then 
+      // Swap the current element with the element at the temporary pivot index
+      swap A[i] with A[j]
+      // Move the temporary pivot index forward
+      i := i + 1
+          
+  // Swap the pivot with the last element
+  swap A[i] with A[hi]
+  return i // the pivot index</pre>
+          <h3>Quicksort visual representation</h3>
+
         <iframe width="560" height="315" src="https://www.youtube.com/embed/9IqV6ZSjuaI?si=LqFW27b6YvD1yIqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <a href="https://en.wikipedia.org/wiki/Quicksort">More information...</a>
+        <p>Most of the information was taken from <a href="https://en.wikipedia.org/wiki/Quicksort">here</a></p>
       </section>
-      <div></div>
       <!--3er Titulo-->
       <section id="merge_sort" class="main-section">
-        <header>Merge sort</header>
+        <header>
+          <h1>Bubble sort</h1>
+        </header>
         <p>
-          Known for its simplicity, the Bubble algorythm 
-          yara yara...
+          Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the input list element by element, comparing the current element with the one after it, swapping their values if needed. These passes through the list are repeated until no swaps have to be performed during a pass, meaning that the list has become fully sorted. The algorithm, which is a comparison sort, is named for the way the larger elements "bubble" up to the top of the list.Known for its simplicity, the Bubble algorythm
         </p>
-        <p>
-          yara yara...
-        </p>
-        <code>code stuff here
-        </code>
-        
+        <h3>Bubble sort pseudocode</h3>
+        <pre class="code">
+procedure bubbleSort(A : list of sortable items)
+n := length(A)
+repeat
+    swapped := false
+    for i := 1 to n-1 inclusive do
+        { if this pair is out of order }
+        if A[i-1] > A[i] then
+            { swap them and remember something changed }
+            swap(A[i-1], A[i])
+            swapped := true
+        end if
+    end for
+  until not swapped
+end procedure</pre>
+          <h3>Bubble sort visual representation</h3>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/ZRPoEKHXTJg?si=ncTTQMdkiXyJZZD1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <a href="https://en.wikipedia.org/wiki/Merge_sort">More information...</a>
+        <p>Most of the information was taken from <a href="https://en.wikipedia.org/wiki/Merge_sort">here</a></p>
       </section>
-      <div></div>
       
       <!--4to Titulo-->
       <section id="introsort" class="main-section">
@@ -108,7 +148,7 @@
         <code>code stuff here
         </code>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/67ta5WTjjUo?si=Sh-YDVDVgE_IjN1Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <a href="https://en.wikipedia.org/wiki/Introsort">More information...</a>
+        <p>Most of the information was taken from<a href="https://en.wikipedia.org/wiki/Introsort">here</a></p>
       </section>
       <div></div>
 
