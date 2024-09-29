@@ -4,20 +4,16 @@
     margin: 0;
     
   }
+  body{
+    display:flex;
+  }
 
   h1, h2, h3, h4{
     font-size: 1.5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
-  div{
-    position: relative;
-    width:0;
-  }
   #main-doc{
-    position: absolute;
-    left: 305px;
-  
   }
   .main-section{
     display: block;
@@ -31,12 +27,7 @@
   }
   #navbar{
     height: 100%;
-    width: 16rem;
-    
-    position: fixed;
-    top:0;
-    overflow-x: hidden;
-    overflow-y: auto;
+    min-width: 16rem;
     background-color: rgba(30, 19, 50, 0.7);
     border: 2px;
     border-style: solid;
@@ -88,6 +79,9 @@
   }
   
   @media (max-width: 500px){
+    body{
+      display: block;
+    }
       
     #navbar{
       width: 100%;
@@ -111,6 +105,8 @@
     font-size: medium;
     padding: 1rem;
     border: solid black;
+    max-width: 100%;
+    overflow: scroll;
   }
   
   /*/////////////////
