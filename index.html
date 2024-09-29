@@ -12,9 +12,9 @@
         <header id="nav-header">Sorting algorithms</header>
         <ul>
           <a href="#5_sorting_algorithms"><li class="nav-link">5 sorting algorithms</li></a>
-          <li><a class="nav-link" href="#bubble_sort">Bubble sort</a></li>
+          <a></a><li><a class="nav-link" href="#bubble_sort">Bubble sort</a></li>
           <li><a class="nav-link" href="#radix_sort">Radix sort</a></li></li>
-          <li><a class="nav-link" href="#counting_sort">Counting Sort</a></li>
+          <li><a class="nav-link" href="#introsort">Counting Sort</a></li>
           <li><a class="nav-link" href="#merge_sort">Merge sort</a></li>
           <li><a class="nav-link" href="#quicksort">Quicksort</a></li>
         </ul>
@@ -26,7 +26,7 @@
       <section id="5_sorting_algorithms" class="main-section">
         <header>5 sorting algorithms</header>
         <p>In this article we are gonna explore some
-          sorting algorythm, going through the best 
+          sorting algorithm, going through the best 
           to the most infamous</p>
       </section>
       
@@ -41,14 +41,24 @@
           yara yara...
         </p>
         <code>code stuff here
+          procedure bubbleSort(A : list of sortable items)
+          n := length(A)
+          repeat
+              swapped := false
+              for i := 1 to n-1 inclusive do
+                  { if this pair is out of order }
+                  if A[i-1] > A[i] then
+                      { swap them and remember something changed }
+                      swap(A[i-1], A[i])
+                      swapped := true
+                  end if
+              end for
+            until not swapped
+          end procedure
         </code>
-        <ul>Similar algorithms
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Cq7SMsQBEUw?si=yohPL17sMbi1vrxa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <a href="https://en.wikipedia.org/wiki/Bubble_sort">More Information...</a>
       </section>
       <div></div>
       <!--2do Titulo-->
@@ -63,6 +73,8 @@
         </p>
         <code>code stuff here
         </code>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9IqV6ZSjuaI?si=LqFW27b6YvD1yIqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <a href="https://en.wikipedia.org/wiki/Quicksort">More information...</a>
       </section>
       <div></div>
       <!--3er Titulo-->
@@ -78,13 +90,14 @@
         <code>code stuff here
         </code>
         
-
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZRPoEKHXTJg?si=ncTTQMdkiXyJZZD1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <a href="https://en.wikipedia.org/wiki/Merge_sort">More information...</a>
       </section>
       <div></div>
       
       <!--4to Titulo-->
-      <section id="counting_sort" class="main-section">
-        <header>Counting Sort</header>
+      <section id="introsort" class="main-section">
+        <header>Introsort</header>
         <p>
           Known for its simplicity, the Bubble algorythm 
           yara yara...
@@ -94,6 +107,8 @@
         </p>
         <code>code stuff here
         </code>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/67ta5WTjjUo?si=Sh-YDVDVgE_IjN1Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <a href="https://en.wikipedia.org/wiki/Introsort">More information...</a>
       </section>
       <div></div>
 
@@ -110,10 +125,27 @@
         </p>
         <code class="code">code stuff here
         </code>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Tmq1UkL7xeU?si=ucNcEgQOq_TPejZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <a href="https://en.wikipedia.org/wiki/Radix_sort">More information...</a>
       </section>
       <div></div>
-      
 
+      <!--  -->
+      <section id="block-sort" class="main-section">
+        <header>Block Sort</header>
+        <p>
+
+        </p>
+        <p>
+
+        </p>
+        <code class="code">
+          code stuff here
+        </code>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/NjcSyD7p660?si=3mLjbCDESdGVxV9_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <a href="https://en.wikipedia.org/wiki/Block_sort">More information...</a>
+      </section>
+      <div></div>
     </main>
   </body>
 </html>
